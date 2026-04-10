@@ -1,11 +1,6 @@
 import type { NextConfig } from "next";
-import path from "path";
 
 const nextConfig: NextConfig = {
-  // Tell Next.js its workspace root is the frontend folder,
-  // preventing confusion from the root-level package.json/lockfile
-  outputFileTracingRoot: path.join(__dirname, "../"),
-
   // Proxy /api/* to the backend service
   // - In production (Vercel): Vercel edge rewrites handle this via vercel.json,
   //   but Next.js rewrites cover the SSR/middleware layer as well.
